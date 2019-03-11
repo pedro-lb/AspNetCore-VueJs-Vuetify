@@ -1,1 +1,47 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<template>
+    <v-layout>
+        <v-flex xs12 sm6 offset-sm3>
+            <v-card class="mt-5">
+                <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+                       aspect-ratio="2.75">
+                </v-img>
+
+                <v-card-title primary-title>
+                    <div>
+                        <h3 class="headline mb-0">Hello World Test</h3>
+                        <div> The text inputed below will be shown at the button click event due to Vue's reactive nature. </div>
+
+                        <v-text-field label="Message to show"
+                                      v-model="helloWorldText"
+                                      placeholder="Hello World!"
+                                      class="mt-4">
+                        </v-text-field>
+                    </div>
+                </v-card-title>
+
+                <v-card-actions>
+                    <v-btn class="grow" v-on:click="HelloWorld()">Show message</v-btn>
+                </v-card-actions>
+            </v-card>
+        </v-flex>
+    </v-layout>
+</template>
+
+@section Scripts  {
+    <script>
+        var mix = {
+            data: {
+                helloWorldText: 'Hello World!',
+            },
+            methods: {
+                HelloWorld() {
+                    alert(vue.helloWorldText);
+                }
+            }
+        };
+    </script>
+}
