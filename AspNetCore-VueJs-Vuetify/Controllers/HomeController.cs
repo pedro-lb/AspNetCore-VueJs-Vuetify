@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AspNetCore_VueJs_Vuetify.Models;
 using Microsoft.AspNetCore.Mvc;
-using AspNetCore_VueJs_Vuetify.Models;
+using System.Diagnostics;
 
 namespace AspNetCore_VueJs_Vuetify.Controllers
 {
