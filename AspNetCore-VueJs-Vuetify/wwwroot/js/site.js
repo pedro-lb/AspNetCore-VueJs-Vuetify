@@ -1,6 +1,6 @@
 ﻿let mixins = [];
 
-if (mix != undefined) {
+if (typeof mix !== 'undefined') {
     mixins.push(mix);
 }
 
