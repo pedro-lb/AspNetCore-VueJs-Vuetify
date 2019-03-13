@@ -13,7 +13,10 @@
                 <v-card-title primary-title>
                     <div>
                         <h3 class="headline mb-0">Hello World Test</h3>
-                        <div> The text inputed below will be shown at the button click event due to Vue's reactive nature. </div>
+
+                        <transition name="fade">
+                            <div v-if="showText"> The text inputed below will be shown at the button click event due to Vue's reactive nature. </div>
+                        </transition>
 
                         <v-text-field label="Message to show"
                                       v-model="helloWorldText"
@@ -24,7 +27,17 @@
                 </v-card-title>
 
                 <v-card-actions>
-                    <v-btn class="grow" v-on:click="HelloWorld()">Show message</v-btn>
+                    <v-btn 
+                           class="grow" 
+                           v-on:click="HelloWorld()">
+                        Show message
+                    </v-btn>
+
+                    <v-btn 
+                           class="grow"
+                           v-on:click="showText = !showText">
+                        Toggle
+                    </v-btn>
                 </v-card-actions>
             </v-card>
         </v-flex>
@@ -36,6 +49,7 @@
         var mix = {
             data: {
                 helloWorldText: 'Hello World!',
+                showText: true
             },
             methods: {
                 HelloWorld() {
