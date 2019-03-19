@@ -16,6 +16,10 @@
 
     <link rel="stylesheet" href="~/css/site.css" />
     @RenderSection("Styles", required: false)
+
+    <script>
+        let mixins = [];
+    </script>
 </head>
 <body>
     <main role="main">
@@ -38,7 +42,9 @@
         <script src="~/lib/vuetify/vuetify.min.js"></script>
     </environment>
 
+    @RenderSection("VueMixins", required: false)
+    <script src="~/js/app.js" asp-append-version="true"></script>
+
     @RenderSection("Scripts", required: false)
-    <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
 </html>

@@ -44,18 +44,18 @@
     </v-layout>
 </template>
 
-@section Scripts  {
+@section VueMixins  {
     <script>
-        var mix = {
+        mixins.push({
             data: {
                 helloWorldText: 'Hello World!',
                 showText: true
             },
             methods: {
                 HelloWorld() {
-                    alert(vue.helloWorldText);
+                    alert(vm.helloWorldText);
                 }
             }
-        };
+        });
     </script>
 }
