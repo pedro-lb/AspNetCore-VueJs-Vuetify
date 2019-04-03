@@ -27,14 +27,12 @@
                 </v-card-title>
 
                 <v-card-actions>
-                    <v-btn 
-                           class="grow" 
+                    <v-btn class="grow"
                            v-on:click="HelloWorld()">
                         Show message
                     </v-btn>
 
-                    <v-btn 
-                           class="grow"
+                    <v-btn class="grow"
                            v-on:click="showText = !showText">
                         Toggle
                     </v-btn>
@@ -49,13 +47,13 @@
         mixins.push({
             data: {
                 helloWorldText: 'Hello World!',
-                showText: true
+                showText: true,
             },
             methods: {
                 HelloWorld() {
                     alert(vm.helloWorldText);
                 }
-            }
+            },
         });
     </script>
 }
